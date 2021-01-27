@@ -7,7 +7,8 @@ const typeDefs = require('./graphql/typeDefs');
 
 const server = new ApolloServer({
     typeDefs,
-    resolvers
+    resolvers,
+    context: ({req})=>({req})
 });
 
 mongoose.connect(MONGODB,{useNewUrlParser: true}).then(()=>{
@@ -18,4 +19,4 @@ mongoose.connect(MONGODB,{useNewUrlParser: true}).then(()=>{
 })
 
 
-// 1:12:50 https://www.youtube.com/watch?v=n1mdAPFq2Os&list=WL&index=29w
+// 1:35:00 https://www.youtube.com/watch?v=n1mdAPFq2Os&list=WL&index=29w
