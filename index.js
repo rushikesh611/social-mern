@@ -20,4 +20,3 @@ mongoose.connect(MONGODB,{useNewUrlParser: true}).then(()=>{
 })
 
 
-// 2:08:00 https://www.youtube.com/watch?v=n1mdAPFq2Os&list=WL&index=29w
