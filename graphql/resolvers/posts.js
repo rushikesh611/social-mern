@@ -10,7 +10,7 @@ module.exports={
              return posts;
          } catch(err){
              throw new Error(err);
-         }
+            }
          },
         async getPost(_,{postId}){
             try{
@@ -80,9 +80,9 @@ module.exports={
             } else throw new UserInputError('Post not found');
         }
     },
-    Subsciption:{
-        newPost:{
-            subscribe: (_,__,{pubsub}) => pubsub.asyncIterator('NEW_POST')
+    Subscription: {
+        newPost: {
+          subscribe: (_, __, { pubsub }) => pubsub.asyncIterator('NEW_POST')
         }
     }
 };
