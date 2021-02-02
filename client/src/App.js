@@ -9,6 +9,8 @@ import MenuBar from './components/MenuBar';
 import { Container } from 'semantic-ui-react';
 import {AuthProvider} from './context/auth';
 import AuthRoute from './utils/AuthRoute';
+import SinglePost from './pages/SinglePost';
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
             <Route exact path='/' component={Home}/>
             <AuthRoute exact path='/login' component={Login}/>
             <AuthRoute exact path='/Register' component={Register}/>
+            <Route exact path="/posts/:postId" component={SinglePost}/>
         </Container>
       </Router>
     </AuthProvider>
@@ -28,4 +31,4 @@ function App() {
 export default App;
 
 
-// 4:07:50 https://www.youtube.com/watch?v=n1mdAPFq2Os&list=WL&index=29w
+// 4:27:50 https://www.youtube.com/watch?v=n1mdAPFq2Os&list=WL&index=29w
